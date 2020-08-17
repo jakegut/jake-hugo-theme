@@ -19,7 +19,7 @@ a{
 }
 
 a:hover{
-  color: #008EBB;
+  opacity: 0.6;
 }
 
 .wrapper{
@@ -77,6 +77,11 @@ div.header > h3 > a{
   border-bottom: 2px solid rgba(255, 255, 255, 0.6);
 }
 
+.post-list-item > div > h4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .container{
   /* min-height: 100vh; */
 }
@@ -91,6 +96,15 @@ footer{
   max-width: 100%;
   max-height: 250px;
   display: block;
+}
+
+.project-list-item{
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.project-list-item:not(:last-child){
+  border-bottom: 2px solid white;
 }
 
 @media (min-width: 940px){
