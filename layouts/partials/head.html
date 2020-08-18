@@ -12,10 +12,16 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <!-- Custom CSS -->
-<link rel="stylesheet" href="{{ "css/normalize.css" | absURL }}">
+
+{{ $normalize := resources.Get "css/normalize.css" }}
+{{ $skeleton := resources.Get "css/skeleton.css" }}
+{{ $jake := resources.Get "css/jake.css" }}
+{{ $style := slice $normalize $skeleton $jake | resources.Concat "bundle.css" | minify | fingerprint }}
+
+<!-- <link rel="stylesheet" href="{{ "css/normalize.css" | absURL }}">
 <link rel="stylesheet" href="{{ "css/skeleton.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/jake.css" | absURL }}">
-<link rel="stylesheet" href="{{ "css/syntax.css" | absURL }}">
+<link rel="stylesheet" href="{{ "css/jake.css" | absURL }}"> -->
+<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
 <!-- favicon -->
 {{ with .Site.Params.Favicon }}
