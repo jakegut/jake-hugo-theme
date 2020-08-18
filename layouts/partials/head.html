@@ -9,14 +9,15 @@
 {{ end }}
 
 <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 
 <!-- Custom CSS -->
 
 {{ $normalize := resources.Get "css/normalize.css" }}
 {{ $skeleton := resources.Get "css/skeleton.css" }}
 {{ $jake := resources.Get "css/jake.css" }}
-{{ $style := slice $normalize $skeleton $jake | resources.Concat "bundle.css" | minify | fingerprint }}
+{{ $icomoon := resources.Get "css/icomoon.css" }}
+{{ $style := slice $icomoon $normalize $skeleton $jake | resources.Concat "bundle.css" | minify | fingerprint }}
 
 <!-- <link rel="stylesheet" href="{{ "css/normalize.css" | absURL }}">
 <link rel="stylesheet" href="{{ "css/skeleton.css" | absURL }}">
@@ -28,6 +29,7 @@
 <link rel="shortcut icon" href="{{ . }}">
 {{ end }}
 
+<link href='https://fonts.gstatic.com' rel='preconnect' crossorigin>
 <!-- Google Fonts -->
 <!-- <link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet"> -->
 <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Lato&family=Montserrat&display=swap" rel="stylesheet">

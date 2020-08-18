@@ -58,6 +58,7 @@ ul.header > li{
 .fab, .fas{
   color: white;
   padding: 10px;
+  font-size:  45px;
 }
 
 .fab:hover, .fas:hover{
