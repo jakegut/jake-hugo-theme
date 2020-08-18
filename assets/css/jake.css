@@ -124,3 +124,7 @@ p>img{
   margin: 0 auto;
   display: block;
 }
+
+#social-links > a {
+  text-decoration: none;
+}
