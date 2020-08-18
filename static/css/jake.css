@@ -99,12 +99,8 @@ footer{
 }
 
 .project-list-item{
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-
-.project-list-item:not(:last-child){
-  border-bottom: 2px solid white;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 @media (min-width: 940px){
