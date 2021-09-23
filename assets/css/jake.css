@@ -55,6 +55,22 @@ ul.header > li{
   padding-left: 11px;
 }
 
+ul.tech {
+  list-style-type: none;
+}
+
+ul.tech > li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tech-sep {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .fab, .fas{
   color: white;
   padding: 10px;
