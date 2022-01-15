@@ -7,10 +7,11 @@ html {
 }
 
 body {
-	background-color: #161616;
+	/* background-color: #161616; */
+  background-color: #1a2410;
 	height: 100%;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 2em;
+	font-size: 18px;
 	color: white;
 }
 
@@ -49,6 +50,7 @@ ul.header{
   font-size: 2.3rem;
   list-style-type: none;
 }
+
 
 ul.header > li{
   display: inline;
@@ -91,7 +93,13 @@ div.header > h3 > a{
 }
 
 .post-list-item{
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 1px dashed rgba(184, 184, 184, 0.205);
+}
+
+.date {
+  font-family: 'Anonymous Pro', monospace;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .post-list-item > div > h4{
@@ -99,8 +107,22 @@ div.header > h3 > a{
   margin-bottom: 1rem;
 }
 
-.container{
-  /* min-height: 100vh; */
+a {
+  color: white;
+  font-weight: 700;
+}
+
+a:hover {
+  opacity: 0.6;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.3rem;
+  margin-top: 1rem;
 }
 
 footer{
@@ -147,4 +169,18 @@ p>img{
 
 table ul {
   margin: 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.container {
+  max-width: 70ch;
+}
+
+@media (min-width: 550px) {
+  .date {
+    text-align: right;
+  }
 }
