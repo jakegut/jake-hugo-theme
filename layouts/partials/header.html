@@ -1,4 +1,17 @@
-<header>
-  <h3><a href='{{ "/" | absLangURL }}'>{{ .Site.Params.Name }}</a></h3>
-  {{ partial "links.html" . }}
-</header>
+<div class="header-wrapper">
+  <header>
+    <!-- <h3><a href='{{ "/" | absLangURL }}'>{{ .Site.Params.Name }}</a></h3>
+     -->
+    <div class="header-name">
+      <a href='{{ "/" | absLangURL }}'>
+        {{ if isset .Params "shortname" }}
+          <h4>user@jakegut<span class="header-prompt">:~/{{ .Type }}/{{ .Params.shortname }}$</span><span class="header-underscore">_</span></h4>
+        {{ else }}
+          <h4>user@jakegut<span class="header-prompt">:~{{ strings.TrimRight "/" .RelPermalink  }}$</span><span class="header-underscore">_</span></h4>
+        {{ end }}
+      </a>
+    </div>
+    {{ partial "links.html" . }}
+  </header>
+  <hr>
+</div>
