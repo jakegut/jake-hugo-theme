@@ -1,14 +1,12 @@
 <div class="header-wrapper">
   <header>
-    <!-- <h3><a href='{{ "/" | absLangURL }}'>{{ .Site.Params.Name }}</a></h3>
-     -->
     <div class="header-name">
       <a href='{{ "/" | absLangURL }}'>
+        {{ $path := printf ":~%s$" (strings.TrimRight "/" .RelPermalink) }}
         {{ if isset .Params "shortname" }}
-          <h4>user@jakegut<span class="header-prompt">:~/{{ .Type }}/{{ .Params.shortname }}$</span><span class="header-underscore">_</span></h4>
-        {{ else }}
-          <h4>user@jakegut<span class="header-prompt">:~{{ strings.TrimRight "/" .RelPermalink  }}$</span><span class="header-underscore">_</span></h4>
+          {{ $path = printf ":~/%s/%s$" .Type .Params.shortname }}
         {{ end }}
+        <h4>user@jakegut<span class="header-prompt">{{ $path }}</span><span class="header-underscore">_</span></h4>
       </a>
     </div>
     {{ partial "links.html" . }}

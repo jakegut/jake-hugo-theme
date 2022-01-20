@@ -2,8 +2,6 @@
 <html lang="{{ .Language.Lang }}">
 
 	<head>
-		<title> {{ .Title }} &middot; {{ .Site.Title }} </title>
-
 		{{ partial "head.html" . }}
 	</head>
 
@@ -27,22 +25,10 @@
                 <h5 class="date">{{ .Date.Format "Jan 02 2006" }}</h5>
               </div>
             </a>
-            
-              <!-- <div class="post-list-item">
-                <div class="post-header">
-                  <h4 class="post-link"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-                  <h5 class="">Posted on {{ .Date.Format "2006-01-02" }}</h5>
-                </div>
-                <div class="post-summary"><p>{{ .Summary }}</p></div>
-                <div class="post-list-footer text-center">
-                  <a href="{{ .Permalink }}">{{ i18n "read-more" }}</a>
-                </div>
-              </div> -->
             </div>
             {{ end }}
           </div>
         </div>
-				<!--  -->
       </div>
       {{ partial "footer.html" . }}
     </div>

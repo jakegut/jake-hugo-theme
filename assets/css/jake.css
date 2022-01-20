@@ -170,9 +170,11 @@ header {
 }
 
 footer{
+  margin-top: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 .project-img{
