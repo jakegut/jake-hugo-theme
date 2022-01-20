@@ -151,6 +151,10 @@ div.header > h3 > a{
   margin-bottom: 1rem;
 }
 
+.header-name h4 {
+  margin-bottom: 0;
+}
+
 a {
   color: inherit;
 }
