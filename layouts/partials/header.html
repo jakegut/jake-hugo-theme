@@ -2,14 +2,16 @@
   <header>
     <div class="header-name">
       <a href='{{ "/" | absLangURL }}'>
-        {{ $path := printf ":~%s$" (strings.TrimRight "/" .RelPermalink) }}
-        {{ if isset .Params "shortname" }}
-          {{ $path = printf ":~/%s/%s$" .Type .Params.shortname }}
-        {{ end }}
-        <h4>user@jakegut<span class="header-prompt">{{ $path }}</span><span class="header-underscore">_</span></h4>
+        {{ $path := printf ":~%s$" (strings.TrimRight "/" .RelPermalink) }} {{
+        if isset .Params "shortname" }} {{ $path = printf ":~/%s/%s$" .Type
+        .Params.shortname }} {{ end }}
+        <h4>
+          user@jakegut<span class="header-prompt">{{ $path }}</span
+          ><span class="header-underscore">_</span>
+        </h4>
       </a>
     </div>
     {{ partial "links.html" . }}
   </header>
-  <hr>
+  <hr />
 </div>

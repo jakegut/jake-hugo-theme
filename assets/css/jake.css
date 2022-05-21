@@ -1,40 +1,66 @@
+@font-face {
+  font-family: "Pixel Operator";
+  src: url("/fonts/PixelOperator.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Pixel Operator Mono";
+  src: url("/fonts/PixelOperatorMono.ttf") format("truetype");
+}
+
 * {
-	margin: 0;
+  margin: 0;
 }
 
 html {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	/* background-color: #161616; */
+  /* background-color: #161616; */
   /* background-color: #0b0d05;
    */
-  background-image: url('/img/zwartevilt.png');
-	height: 100%;
-	font-family: 'IBM Plex Serif', sans-serif;
-	font-size: 20px;
+  /* background-image: url("/img/zwartevilt.png"); */
+  background-image: url("/img/bck-grid.gif");
+  height: 100%;
+  font-family: "IBM Plex Serif", sans-serif;
+  font-size: 19px;
   line-height: 1.8;
-	color: rgb(31, 31, 31);
+  color: rgb(31, 31, 31);
   color: white;
 }
 
-a{
-  color: #00C2FF;
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Pixel Operator";
+} */
+
+.main {
+  background-color: rgba(0, 0, 0, 0.706);
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-a:hover{
+a {
+  color: #00c2ff;
+}
+
+a:hover {
   opacity: 0.6;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.text-centered{
+.text-centered {
   text-align: center;
   margin: 0 auto;
 }
@@ -45,13 +71,14 @@ a:hover{
   align-items: center;
 }
 
-div.header{
+div.header {
   margin-top: 30px;
 }
 
 header {
-  font-family: 'Anonymous Pro';
-  text-transform: lowercase; 
+  /* font-family: "Anonymous Pro"; */
+  font-family: "Pixel Operator Mono";
+  text-transform: lowercase;
   font-weight: bold;
 }
 
@@ -60,8 +87,9 @@ header {
 }
 
 .header-prompt {
-  color:#b5e853;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.13),0 0 5px rgba(181, 232, 83, 0.3),0 0 10px rgb(140, 185, 54);
+  color: #b5e853;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.13), 0 0 5px rgba(181, 232, 83, 0.3),
+    0 0 10px rgb(140, 185, 54);
 }
 
 .header-underscore {
@@ -78,14 +106,13 @@ header h3 a {
   text-decoration: none;
 }
 
-ul.header{
+ul.header {
   font-size: 2.3rem;
   list-style-type: none;
   margin: 0;
 }
 
-
-ul.header > li{
+ul.header > li {
   display: inline;
   padding-left: 11px;
 }
@@ -106,32 +133,40 @@ ul.tech > li {
   padding-right: 10px;
 }
 
-.fab, .fas{
+.fab,
+.fas {
   color: white;
   padding: 10px;
-  font-size:  45px;
+  font-size: 45px;
 }
 
-.fab:hover, .fas:hover{
+.fab:hover,
+.fas:hover {
   opacity: 0.6;
 }
 
-div.header > h3 > a{
+div.header > h3 > a {
   text-decoration: none;
   color: white;
 }
 
-#post-list{
+#post-list {
   list-style: none;
 }
 
-.post-link, .date {
-  margin-top: 15px;
-  margin-bottom: 15px;
+.post-link,
+.date {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
 
-.post-list-item{
+.post-list-item {
   border-bottom: 1px dashed rgba(184, 184, 184, 0.322);
+}
+
+.post-list-item > * {
+  display: inline-block;
 }
 
 .post-list-item > a:hover {
@@ -139,14 +174,15 @@ div.header > h3 > a{
 }
 
 .post-list-item:hover {
-  background-color:rgba(90, 90, 90, 0.075);
+  background-color: rgba(90, 90, 90, 0.075);
 }
 
 .date {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Pixel Operator", monospace;
+  font-size: 2rem;
 }
 
-.post-list-item > div > h4{
+.post-list-item > div > h4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -176,7 +212,7 @@ header ul li:nth-child(1) {
   padding-left: 0;
 }
 
-footer{
+footer {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
@@ -184,34 +220,37 @@ footer{
   text-align: center;
 }
 
-.project-img{
+.project-img {
   max-width: 100%;
   max-height: 250px;
   display: block;
 }
 
-.project-list-item{
+.project-list-item {
   padding-bottom: 20px;
   padding-top: 20px;
 }
 
-@media (min-width: 940px){
-  .project-list-item{
+@media (min-width: 940px) {
+  .project-list-item {
     display: flex;
   }
 }
 
-code{
-  background: none;
+code {
   border: none;
   border-radius: none;
+  background-color: rgb(39, 39, 39);
 }
 
-code, kbd, pre, samp{
-  font-family: 'Anonymous Pro', 'Courier New', Courier, monospace;
+code,
+kbd,
+pre,
+samp {
+  font-family: "Anonymous Pro", "Courier New", Courier, monospace;
 }
 
-p>img{
+p > img {
   margin: 0 auto;
   display: block;
 }
@@ -246,17 +285,14 @@ hr {
 }
 
 .header-wrapper hr {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 1px;
-    border: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 1px;
+  border: none;
 }
 
 @media (min-width: 550px) {
-  .date {
-    text-align: right;
-  }
 }
 
 @media (max-width: 550px) {
